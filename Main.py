@@ -79,7 +79,7 @@ df = pd.DataFrame(data)
 # fillna fonksiyonu none değerleri 0'la değiştirir.inplace=True diyerek bu değişikliğin orjinal dataframe üzerinde yapılmasını sağlarız.
 df.fillna(0, inplace=True)
 
-# groupby() fonksiyonu, belirli bir sütuna göre verileri gruplar.
+#uzmanlık sütununu seçer ve seçilen sütundaki benzersiz değerleri ve bu değerlerin kaç kez tekrarlandığını sayar. 
 # Sonra, her bir gruptaki eleman sayısını bulmak için size() fonksiyonu kullanılır.
 #reset_index() kullanarak ekranda type:int64 vs yazdırmamasını sağladık.
 uzmanlik_series = df["uzmanlik"].value_counts().reset_index()
